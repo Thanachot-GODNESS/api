@@ -24,3 +24,112 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+main {
+  max-width: 60rem;
+  margin-inline: auto;
+  padding: 2rem 1.5rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.75rem;
+  margin-block: 1rem 1.5rem;
+  padding: 1rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+}
+
+form label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+form input,
+form select {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+form input:focus-visible,
+form select:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 1px;
+}
+
+form [aria-invalid="true"] {
+  border-color: #c0392b;
+}
+
+span[role="alert"] {
+  display: block;
+  color: #c0392b;
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #171717;
+  border-radius: 6px;
+  background: #171717;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #333333;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+button[type="button"] {
+  background: #ffffff;
+  color: #171717;
+}
+
+button[type="button"]:hover {
+  background: #f2f2f2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 0.9rem;
+}
+
+th {
+  font-weight: 600;
+  color: #555555;
+}
+
+p[role="alert"] {
+  color: #c0392b;
+}
+
+section[aria-live] > p {
+  color: #6b6b6b;
+}

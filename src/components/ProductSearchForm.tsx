@@ -18,7 +18,7 @@ export default function ProductSearchForm(
         formState: { errors, isSubmitting },
     } = useForm<SearchQuery>({
         resolver: zodResolver(SearchQuerySchema),
-        mode: "onTouched",
+        mode: "onChange",
         defaultValues: defaultQuery,
     });
 

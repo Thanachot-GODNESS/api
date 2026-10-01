@@ -10,9 +10,10 @@ type ProductFormProps = {
     onSave: (draft: ProductDraft) => void;
     onCancel: () => void;
 };
+
 export default function ProductForm(
     { editing, onSave, onCancel }: ProductFormProps
-) {
+) { 
     const {
         register,
         handleSubmit,
@@ -20,7 +21,7 @@ export default function ProductForm(
         formState: { errors, isDirty, isValid },
     } = useForm<ProductDraft>({
         resolver: zodResolver(ProductDraftSchema),
-        mode: "onTouched",
+        mode: "onChange",
         defaultValues: editing
             ? {
                 title: editing.title, price: editing.price,
